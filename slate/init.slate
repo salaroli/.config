@@ -1,0 +1,73 @@
+### Aliases
+
+## Key aliases
+alias hyper ctrl;shift;alt;cmd
+
+## Application aliases
+alias slack   'Slack'
+alias terminal  'iTerm2'
+alias editor  'Code'
+alias git  'GitHub Desktop'
+alias browser  'Google Chrome'
+alias photoshop  'Photoshop CC'
+alias pdf  'Acrobat Pro'
+alias illustrator  'Illustrator CC'
+alias keynote  'Keynote'
+alias notas  'Evernote'
+alias sourcetree  'Sourcetree'
+alias spotify  'Spotify'
+alias finder 'Finder'
+alias zeplin 'Zeplin'
+alias sketch 'Sketch'
+alias pureref 'PureRef'
+alias trello 'Trello'
+
+## Position aliases
+alias full           move screenOriginX;screenOriginY                                        screenSizeX;screenSizeY
+alias lefthalf       move screenOriginX;screenOriginY                                        screenSizeX/2;screenSizeY
+alias righthalf      move screenOriginX+screenSizeX/2;screenOriginY                          screenSizeX/2;screenSizeY
+alias small          move screenOriginX+screenSizeX/4;screenOriginY+screenSizeY/3            screenSizeX/2;screenSizeY/2
+alias second-third   move screenOriginX+screenSizeX*1/3;screenOriginY                        screenSizeX*2/3;screenSizeY
+alias first-third    move screenOriginX;screenOriginY                                        screenSizeX/3;screenSizeY
+alias right-terminal move screenOriginX+screenSizeX*1/6;screenOriginY                        screenSizeX*5/6;screenSizeY
+alias left-mobile    move screenOriginX;screenOriginY                                        screenSizeX/6;screenSizeY*4/5
+
+### Bindings
+
+# Avaliable keybindings
+# y
+# u
+# i
+# g
+# h
+# j
+# n
+# m
+
+## Location bindings
+bind a:${hyper}  ${lefthalf}
+bind s:${hyper}  ${righthalf}
+bind d:${hyper}  throw next
+
+bind z:${hyper}  ${full}
+bind x:${hyper}  ${small}
+
+bind k:${hyper}  ${first-third}
+bind l:${hyper}  ${second-third}
+bind ;:${hyper}  ${left-mobile}
+bind ':${hyper}  ${right-terminal}
+
+## Core Left Hand
+bind q:${hyper}      focus ${slack}
+bind w:${hyper}      focus ${notas}
+bind e:${hyper}      focus ${trello}
+
+## Develop
+bind space:${hyper}  focus ${editor}
+bind f:${hyper}      focus ${terminal}
+bind b:${hyper}      focus ${browser}
+bind t:${hyper}      focus ${git}
+
+## Misc
+bind c:${hyper}      focus ${finder}
+bind v:${hyper}      focus ${spotify}
