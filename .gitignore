@@ -1,0 +1,5 @@
+nvim/plugged/
+nvim/.netrwhist
+coc
+configstore
+oni2/extensions
