@@ -1,4 +1,6 @@
 let mapleader="\<space>"
+" Use this to update plug, use the correct path to vim
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin()
 " coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
