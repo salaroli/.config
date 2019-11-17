@@ -1,6 +1,14 @@
 let mapleader="\<space>"
-" Use this to update plug, use the correct path to vim
-" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" Install vim-plug if missing
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  augroup VimPlugAutoInstall
+    autocmd!
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  augroup END
+endif
+
 call plug#begin()
 " coc
 let g:coc_global_extensions = [
@@ -34,8 +42,9 @@ Plug 'prettier/vim-prettier', {
     \ 'php',
     \ 'python',
     \ 'ruby',
-    \ 'html',
     \ 'swift' ] }
+
+    " \ 'html',
 
 " nerdtree config
 Plug 'scrooloose/nerdtree'
@@ -55,6 +64,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'enricobacis/vim-airline-clock'
 Plug 'bling/vim-bufferline'
+Plug 'Yggdroot/indentLine'
 
 "ctrl-p
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -69,6 +79,7 @@ Plug 'tpope/vim-jdaddy'
 Plug 'kana/vim-textobj-user' | Plug 'whatyouhide/vim-textobj-xmlattr'
 
 "other
+Plug 'ntpeters/vim-better-whitespace'
 Plug 'qpkorr/vim-bufkill'
 Plug 'tpope/vim-repeat'
 Plug 'airblade/vim-gitgutter'
@@ -80,6 +91,11 @@ Plug 'mhinz/vim-startify'
 
 " ultimo plugin sempre
 Plug 'ryanoasis/vim-devicons'
+
+if !has('nvim')
+  set nocompatible              " be iMproved, required
+  filetype off                  " required
+endif
 
 call plug#end()
 source ~/.config/nvim/coc.vim
@@ -224,8 +240,8 @@ let g:EasyMotion_smartcase = 1
 nmap s <Plug>(easymotion-overwin-f2)
 
 " Prettier
+
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 let g:prettier#quickfix_auto_focus = 0
 let g:prettier#config#bracket_spacing = 'false'
 
@@ -246,7 +262,7 @@ tnoremap <C-w>h <C-\><C-n><C-w>h
 tnoremap <C-w>j <C-\><C-n><C-w>j
 tnoremap <C-w>k <C-\><C-n><C-w>k
 tnoremap <Esc> <C-\><C-n>
-nnoremap <C-t> :botright Ttoggle<cr><C-w>j
+nnoremap <C-t> :botright Ttoggle<cr><C-w>j<C-w>j<C-w>j
 tnoremap <C-t> :Ttoggle<cr>
 
 " Other
@@ -254,3 +270,4 @@ nnoremap <leader>ev :vsplit ~/.config/nvim/init.vim<cr>
 nnoremap <leader>sv :source~/.config/nvim/init.vim<cr>
 nnoremap <leader>p :Prettier<cr>
 nnoremap <leader>k :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
+nnoremap <C-w><C-w> :BD<cr>
