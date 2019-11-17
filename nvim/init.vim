@@ -227,6 +227,7 @@ nmap s <Plug>(easymotion-overwin-f2)
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 let g:prettier#quickfix_auto_focus = 0
+let g:prettier#config#bracket_spacing = 'false'
 
 "Vim-multiple-cursors
 let g:multi_cursor_use_default_mapping=0
