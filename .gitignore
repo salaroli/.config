@@ -1,6 +1,16 @@
-nvim/plugged/
-nvim/.netrwhist
 coc
 coc_backup/
 configstore
+nvim/.netrwhist
+nvim/plugged/
 oni2/extensions
+
+Autodesk
+NuGet
+Unreal Engine
+filezilla
+fontforge
+spark.autodesk.com
+stetic
+xbuild
+yarn
