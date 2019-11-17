@@ -32,15 +32,13 @@ alias f="ag -g"
 alias r="ag"
 alias ls='ls -GFh'
 alias v='nvim'
-alias c='code'
-alias p='python3'
 alias sv="source ~/.zshrc"
 alias yt='web_search duckduckgo \!yt'
 alias goog='web_search google'
 alias spry='cl $spry'
 alias adp='cl $adp'
 alias myip="curl http://ipecho.net/plain; echo"
-alias usage="du -h -d1"
+alias usage="du -k -d1 | sort -nr"
 
 # functions
 cl() {

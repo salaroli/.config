@@ -2,6 +2,7 @@
   "prettier.tslintIntegration": true,
   "prettier.eslintIntegration": true,
   "suggest.noselect": false,
+  "coc.preferences.colorSupport": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "typescript",

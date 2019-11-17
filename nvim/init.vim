@@ -3,19 +3,18 @@ let mapleader="\<space>"
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin()
 " coc
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-pairs',
   \ 'coc-tsserver',
   \ 'coc-eslint', 
-  \ 'coc-prettier', 
   \ 'coc-json', 
   \ 'coc-emmet', 
   \ 'coc-css', 
   \ 'coc-html', 
-  \ 'coc-highlight', 
   \ ]
+" \ 'coc-prettier', 
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}, 'branch': 'release'}
 
 " prettier
 Plug 'prettier/vim-prettier', {
@@ -50,10 +49,11 @@ Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 
 "theme
-Plug 'morhetz/gruvbox'
+Plug 'rakr/vim-one'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'enricobacis/vim-airline-clock'
 Plug 'bling/vim-bufferline'
 
 "ctrl-p
@@ -61,13 +61,12 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " editing
-" Plug 'jiangmiao/auto-pairs'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
 Plug 'easymotion/vim-easymotion'
-" Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-jdaddy'
+Plug 'kana/vim-textobj-user' | Plug 'whatyouhide/vim-textobj-xmlattr'
 
 "other
 Plug 'qpkorr/vim-bufkill'
@@ -76,11 +75,13 @@ Plug 'airblade/vim-gitgutter'
 Plug 'gorodinskiy/vim-coloresque'
 Plug 'kassio/neoterm'
 Plug 'machakann/vim-highlightedyank'
+" Plug 'jsfaint/gen_tags.vim'
+Plug 'mhinz/vim-startify'
 
 " ultimo plugin sempre
 Plug 'ryanoasis/vim-devicons'
-call plug#end()
 
+call plug#end()
 source ~/.config/nvim/coc.vim
 
 "Padrão
@@ -94,7 +95,6 @@ set fileencodings=utf-8
 set hidden
 set history=200
 set hlsearch    " highlight search patterns
-set inccommand=split
 set incsearch    " enable incremental search
 set lazyredraw    " don't redraw screen while executing macros/mappings
 set mouse=a
@@ -121,10 +121,18 @@ syntax on    " enable syntax highlighting
 set termguicolors
 let g:jsx_ext_required=0
 
+if has('nvim')
+  set inccommand=split
+endif
+
 " Theme
-colorscheme gruvbox
+" colorscheme gruvbox
+" let g:airline_theme='laederon'
+
+colorscheme one
+let g:airline_theme='one'
+let g:one_allow_italics = 1
 set background=dark
-let g:airline_theme='laederon'
 let g:airline_powerline_fonts=1
 let g:Powerline_symbols='unicode'
 set laststatus=2
@@ -211,16 +219,9 @@ nnoremap <C-f> :Ag<cr>
 nnoremap <C-b> :Buffers<cr>
 
 
-" EMMET -----------------------------------------
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
-let g:user_emmet_leader_key='<C-a>'
-
-
 " Easymotion
 let g:EasyMotion_smartcase = 1
 nmap s <Plug>(easymotion-overwin-f2)
-
 
 " Prettier
 let g:prettier#autoformat = 0

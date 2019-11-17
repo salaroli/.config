@@ -1,5 +1,6 @@
 nvim/plugged/
 nvim/.netrwhist
 coc
+coc_backup/
 configstore
 oni2/extensions
