@@ -14,13 +14,22 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 source $ZSH/oh-my-zsh.sh
 
 # my config
-export git=$HOME/dev/github/
-export aws=$HOME/dev/aws/
-export spry=$HOME/dev/github/spry-website/
-export adp=$HOME/dev/github/amigos-da-poli/
-
 bindkey -v
 export KEYTIMEOUT=1
+
+# paths
+export dev=$HOME/dev/
+export git=$HOME/dev/github/
+export spry=$HOME/dev/spry-website/
+export adp=$HOME/dev/amigos-da-poli/
+export webnext=$HOME/dev/web-next/
+
+alias spry='cl $spry'
+alias adp='cl $adp'
+alias dev='cl $dev'
+alias next='cl $webnext'
+alias sv="source ~/.zshrc"
+alias ev="nvim ~/.config/zsh/init.zsh"
 
 # EOF
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -32,11 +41,8 @@ alias f="ag -g"
 alias r="ag"
 alias ls='ls -GFh'
 alias v='nvim'
-alias sv="source ~/.zshrc"
 alias yt='web_search duckduckgo \!yt'
 alias goog='web_search google'
-alias spry='cl $spry'
-alias adp='cl $adp'
 alias myip="curl http://ipecho.net/plain; echo"
 alias usage="du -k -d1 | sort -nr"
 

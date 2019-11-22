@@ -8,6 +8,7 @@ alias slack   'Slack'
 alias terminal  'iTerm2'
 alias editor  'Code'
 alias git  'GitHub Desktop'
+alias kraken  'GitKraken'
 alias browser  'Google Chrome'
 alias photoshop  'Photoshop CC'
 alias pdf  'Acrobat Pro'
@@ -67,6 +68,7 @@ bind space:${hyper}  focus ${editor}
 bind f:${hyper}      focus ${terminal}
 bind b:${hyper}      focus ${browser}
 bind t:${hyper}      focus ${git}
+bind n:${hyper}      focus ${kraken}
 
 ## Misc
 bind c:${hyper}      focus ${finder}
