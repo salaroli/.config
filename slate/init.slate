@@ -67,8 +67,8 @@ bind e:${hyper}      focus ${trello}
 bind space:${hyper}  focus ${editor}
 bind f:${hyper}      focus ${terminal}
 bind b:${hyper}      focus ${browser}
-bind t:${hyper}      focus ${git}
-bind n:${hyper}      focus ${kraken}
+# bind t:${hyper}      focus ${git}
+bind t:${hyper}      focus ${kraken}
 
 ## Misc
 bind c:${hyper}      focus ${finder}
