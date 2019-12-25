@@ -15,6 +15,7 @@ alias pdf  'Acrobat Pro'
 alias illustrator  'Illustrator CC'
 alias keynote  'Keynote'
 alias notas  'Evernote'
+alias notion  'Notion'
 alias sourcetree  'Sourcetree'
 alias spotify  'Spotify'
 alias finder 'Finder'
@@ -60,14 +61,13 @@ bind ':${hyper}  ${right-terminal}
 
 ## Core Left Hand
 bind q:${hyper}      focus ${slack}
-bind w:${hyper}      focus ${notas}
-bind e:${hyper}      focus ${trello}
+bind w:${hyper}      focus ${notion}
+bind e:${hyper}      focus ${zeplin}
 
 ## Develop
 bind space:${hyper}  focus ${editor}
 bind f:${hyper}      focus ${terminal}
 bind b:${hyper}      focus ${browser}
-# bind t:${hyper}      focus ${git}
 bind t:${hyper}      focus ${kraken}
 
 ## Misc

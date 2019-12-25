@@ -243,7 +243,7 @@ nmap s <Plug>(easymotion-overwin-f2)
 
 let g:prettier#autoformat = 0
 let g:prettier#quickfix_auto_focus = 0
-let g:prettier#config#bracket_spacing = 'false'
+let g:prettier#config#bracket_spacing = 'true'
 
 "Vim-multiple-cursors
 let g:multi_cursor_use_default_mapping=0
