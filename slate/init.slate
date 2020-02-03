@@ -20,6 +20,7 @@ alias sourcetree  'Sourcetree'
 alias spotify  'Spotify'
 alias finder 'Finder'
 alias zeplin 'Zeplin'
+alias abstract 'Abstract'
 alias sketch 'Sketch'
 alias pureref 'PureRef'
 alias trello 'Trello'
@@ -62,7 +63,7 @@ bind ':${hyper}  ${right-terminal}
 ## Core Left Hand
 bind q:${hyper}      focus ${slack}
 bind w:${hyper}      focus ${notion}
-bind e:${hyper}      focus ${zeplin}
+bind e:${hyper}      focus ${abstract}
 bind r:${hyper}      focus ${sketch}
 
 ## Develop
