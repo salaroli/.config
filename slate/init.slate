@@ -24,6 +24,7 @@ alias abstract 'Abstract'
 alias sketch 'Sketch'
 alias pureref 'PureRef'
 alias trello 'Trello'
+alias zoom 'zoom.us'
 
 ## Position aliases
 alias full           move screenOriginX;screenOriginY                                        screenSizeX;screenSizeY
@@ -38,7 +39,6 @@ alias left-mobile    move screenOriginX;screenOriginY                           
 ### Bindings
 
 # Avaliable keybindings
-# y
 # u
 # i
 # g
@@ -65,6 +65,7 @@ bind q:${hyper}      focus ${slack}
 bind w:${hyper}      focus ${notion}
 bind e:${hyper}      focus ${abstract}
 bind r:${hyper}      focus ${sketch}
+bind y:${hyper}      focus ${zoom}
 
 ## Develop
 bind space:${hyper}  focus ${editor}
