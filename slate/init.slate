@@ -63,9 +63,9 @@ bind ':${hyper}  ${right-terminal}
 ## Core Left Hand
 bind q:${hyper}      focus ${slack}
 bind w:${hyper}      focus ${notion}
-bind e:${hyper}      focus ${abstract}
+bind e:${hyper}      focus ${zoom}
 bind r:${hyper}      focus ${sketch}
-bind y:${hyper}      focus ${zoom}
+# bind y:${hyper}      focus ${zoom}
 
 ## Develop
 bind space:${hyper}  focus ${editor}
