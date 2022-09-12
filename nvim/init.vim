@@ -20,6 +20,7 @@ let g:coc_global_extensions = [
   \ 'coc-emmet', 
   \ 'coc-css', 
   \ 'coc-html', 
+  \ 'coc-python', 
   \ ]
 " \ 'coc-prettier', 
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}, 'branch': 'release'}
